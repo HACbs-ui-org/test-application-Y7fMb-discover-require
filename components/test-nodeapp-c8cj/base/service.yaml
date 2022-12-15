@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: test-nodeapp-c8cj
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: test-nodeapp-c8cj
+    app.kubernetes.io/part-of: test-application
+  name: test-nodeapp-c8cj
+  namespace: karthik
+spec:
+  ports:
+  - port: 8080
+    targetPort: 8080
+  selector:
+    app.kubernetes.io/instance: test-nodeapp-c8cj
+status:
+  loadBalancer: {}
